@@ -125,7 +125,7 @@ Mental-Health-RAG-Bot/
 ├── app.py
 ├── speaking_bot.py
 ├── requirements.txt
-├── expreriment.ipynb
+├── experiment.ipynb
 │
 ├── Doc/
 │   ├── I_am_not_sick_excerpt.txt
