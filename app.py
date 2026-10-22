@@ -16,7 +16,7 @@ load_dotenv()
 app = Flask(__name__)
 
 # ---------------- PDF Loading ----------------
-loader = DirectoryLoader('Peoject_2/Doc')
+loader = DirectoryLoader('Doc')
 docs = loader.load()
 splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
 chunk = splitter.split_documents(docs)
