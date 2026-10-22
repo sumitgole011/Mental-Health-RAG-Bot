@@ -187,15 +187,13 @@ Replace the placeholder with your actual Groq API key. Never commit API keys or 
 
 ### Step 5: Verify the knowledge-base directory
 
-The application currently loads documents from `Peoject_2/Doc`, while the repository contains a root-level `Doc/` directory.
-
-Update the loader path in `app.py` to match the actual directory:
+The document loader now points to the repository's root-level `Doc/` directory:
 
 ```python
 loader = DirectoryLoader("Doc")
 ```
 
-Ensure the required documents are present before running the application.
+Ensure the required documents are present before running the application. Start the app from the repository root.
 
 ### Step 6: Run the chatbot
 
