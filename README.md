@@ -1,5 +1,20 @@
 # 🧠 Mental Health Buddy — AI-Powered RAG Chatbot
 
+## Recruiter quick view
+
+**Problem:** Generic chatbot responses can miss context from a defined knowledge source.
+
+**Approach:** A Python/Flask conversational RAG prototype using document retrieval, LangChain, an LLM integration and optional speech output.
+
+**Engineering discussion points:** Document loading, chunking, embeddings, vector search, prompt grounding, conversation state and failure handling.
+
+### Safety, privacy and responsible use
+
+This is an **educational AI prototype**, not a therapist, medical device, crisis-response service or substitute for qualified mental-health care. Responses can be inaccurate or inappropriate, and retrieval does not guarantee factual correctness. Do not use this application to make diagnosis or treatment decisions. In an immediate crisis, contact local emergency services or an appropriate crisis-support provider.
+
+Avoid entering personally identifying, medical or other sensitive information into the demo. Before any real-world deployment, review third-party model data handling, storage and retention, access controls, content-safety behavior, and escalation paths. No clinical validation is claimed.
+
+
 <p align="center">
   <strong>A conversational AI companion designed to provide empathetic responses using knowledge retrieval, large language models, and speech interaction.</strong>
 </p>
