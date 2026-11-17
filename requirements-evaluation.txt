@@ -1,0 +1,7 @@
+langchain-huggingface
+langchain-chroma
+langchain-text-splitters
+sentence-transformers
+scikit-learn
+numpy
+httpx[socks]

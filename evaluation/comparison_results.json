@@ -1,0 +1,1288 @@
+{
+  "source_commit": "87e6b10aee23120dd3088dbd9d78ddc9751c859f",
+  "scope": "Retrieval only; explicit UTF-8 loader adaptation; anchor containment proxy, not answer accuracy.",
+  "sets": {
+    "questions.json": {
+      "sha256": "70bdfce9453a83cb66d03453577c1c7384481fa28cb38fa88b40143d66dba558",
+      "methods": {
+        "old_mmr": {
+          "hits": 1,
+          "total": 14,
+          "hit_rate": 0.07142857142857142,
+          "mrr_at_2": 0.07142857142857142,
+          "results": [
+            {
+              "id": "Q01",
+              "hit_at_2": true,
+              "reciprocal_rank": 1.0,
+              "retrieved": [
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 3574,
+                  "end": 4475
+                },
+                {
+                  "source": "I_am_not_sick_excerpt.txt",
+                  "start": 67447,
+                  "end": 67480
+                }
+              ]
+            },
+            {
+              "id": "Q02",
+              "hit_at_2": false,
+              "reciprocal_rank": 0,
+              "retrieved": [
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 29858,
+                  "end": 30519
+                },
+                {
+                  "source": "I_am_not_sick_excerpt.txt",
+                  "start": 48037,
+                  "end": 48973
+                }
+              ]
+            },
+            {
+              "id": "Q03",
+              "hit_at_2": false,
+              "reciprocal_rank": 0,
+              "retrieved": [
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 24191,
+                  "end": 24420
+                },
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 20098,
+                  "end": 20734
+                }
+              ]
+            },
+            {
+              "id": "Q04",
+              "hit_at_2": false,
+              "reciprocal_rank": 0,
+              "retrieved": [
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 24191,
+                  "end": 24420
+                },
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 39194,
+                  "end": 39196
+                }
+              ]
+            },
+            {
+              "id": "Q05",
+              "hit_at_2": false,
+              "reciprocal_rank": 0,
+              "retrieved": [
+                {
+                  "source": "I_am_not_sick_excerpt.txt",
+                  "start": 75119,
+                  "end": 75152
+                },
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 40540,
+                  "end": 41148
+                }
+              ]
+            },
+            {
+              "id": "Q06",
+              "hit_at_2": false,
+              "reciprocal_rank": 0,
+              "retrieved": [
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 24191,
+                  "end": 24420
+                },
+                {
+                  "source": "I_am_not_sick_excerpt.txt",
+                  "start": 51050,
+                  "end": 51078
+                }
+              ]
+            },
+            {
+              "id": "Q07",
+              "hit_at_2": false,
+              "reciprocal_rank": 0,
+              "retrieved": [
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 1436,
+                  "end": 1924
+                },
+                {
+                  "source": "I_am_not_sick_excerpt.txt",
+                  "start": 63503,
+                  "end": 63536
+                }
+              ]
+            },
+            {
+              "id": "Q08",
+              "hit_at_2": false,
+              "reciprocal_rank": 0,
+              "retrieved": [
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 24191,
+                  "end": 24420
+                },
+                {
+                  "source": "I_am_not_sick_excerpt.txt",
+                  "start": 184104,
+                  "end": 184122
+                }
+              ]
+            },
+            {
+              "id": "Q09",
+              "hit_at_2": false,
+              "reciprocal_rank": 0,
+              "retrieved": [
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 40540,
+                  "end": 41148
+                },
+                {
+                  "source": "I_am_not_sick_excerpt.txt",
+                  "start": 45811,
+                  "end": 46565
+                }
+              ]
+            },
+            {
+              "id": "Q10",
+              "hit_at_2": false,
+              "reciprocal_rank": 0,
+              "retrieved": [
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 12326,
+                  "end": 13306
+                },
+                {
+                  "source": "I_am_not_sick_excerpt.txt",
+                  "start": 75119,
+                  "end": 75152
+                }
+              ]
+            },
+            {
+              "id": "Q11",
+              "hit_at_2": false,
+              "reciprocal_rank": 0,
+              "retrieved": [
+                {
+                  "source": "I_am_not_sick_excerpt.txt",
+                  "start": 104367,
+                  "end": 105026
+                },
+                {
+                  "source": "I_am_not_sick_excerpt.txt",
+                  "start": 80377,
+                  "end": 80398
+                }
+              ]
+            },
+            {
+              "id": "Q12",
+              "hit_at_2": false,
+              "reciprocal_rank": 0,
+              "retrieved": [
+                {
+                  "source": "I_am_not_sick_excerpt.txt",
+                  "start": 89616,
+                  "end": 89637
+                },
+                {
+                  "source": "I_am_not_sick_excerpt.txt",
+                  "start": 158480,
+                  "end": 159455
+                }
+              ]
+            },
+            {
+              "id": "Q13",
+              "hit_at_2": false,
+              "reciprocal_rank": 0,
+              "retrieved": [
+                {
+                  "source": "I_am_not_sick_excerpt.txt",
+                  "start": 83723,
+                  "end": 83985
+                },
+                {
+                  "source": "I_am_not_sick_excerpt.txt",
+                  "start": 80377,
+                  "end": 80398
+                }
+              ]
+            },
+            {
+              "id": "Q14",
+              "hit_at_2": false,
+              "reciprocal_rank": 0,
+              "retrieved": [
+                {
+                  "source": "I_am_not_sick_excerpt.txt",
+                  "start": 82119,
+                  "end": 82140
+                },
+                {
+                  "source": "I_am_not_sick_excerpt.txt",
+                  "start": 83723,
+                  "end": 83985
+                }
+              ]
+            }
+          ]
+        },
+        "old_similarity": {
+          "hits": 3,
+          "total": 14,
+          "hit_rate": 0.21428571428571427,
+          "mrr_at_2": 0.14285714285714285,
+          "results": [
+            {
+              "id": "Q01",
+              "hit_at_2": true,
+              "reciprocal_rank": 1.0,
+              "retrieved": [
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 3574,
+                  "end": 4475
+                },
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 24191,
+                  "end": 24420
+                }
+              ]
+            },
+            {
+              "id": "Q02",
+              "hit_at_2": true,
+              "reciprocal_rank": 0.5,
+              "retrieved": [
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 29858,
+                  "end": 30519
+                },
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 4474,
+                  "end": 5432
+                }
+              ]
+            },
+            {
+              "id": "Q03",
+              "hit_at_2": false,
+              "reciprocal_rank": 0,
+              "retrieved": [
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 24191,
+                  "end": 24420
+                },
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 601,
+                  "end": 1577
+                }
+              ]
+            },
+            {
+              "id": "Q04",
+              "hit_at_2": false,
+              "reciprocal_rank": 0,
+              "retrieved": [
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 24191,
+                  "end": 24420
+                },
+                {
+                  "source": "I_am_not_sick_excerpt.txt",
+                  "start": 10039,
+                  "end": 10982
+                }
+              ]
+            },
+            {
+              "id": "Q05",
+              "hit_at_2": false,
+              "reciprocal_rank": 0,
+              "retrieved": [
+                {
+                  "source": "I_am_not_sick_excerpt.txt",
+                  "start": 75119,
+                  "end": 75152
+                },
+                {
+                  "source": "I_am_not_sick_excerpt.txt",
+                  "start": 20760,
+                  "end": 21136
+                }
+              ]
+            },
+            {
+              "id": "Q06",
+              "hit_at_2": false,
+              "reciprocal_rank": 0,
+              "retrieved": [
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 24191,
+                  "end": 24420
+                },
+                {
+                  "source": "I_am_not_sick_excerpt.txt",
+                  "start": 51050,
+                  "end": 51078
+                }
+              ]
+            },
+            {
+              "id": "Q07",
+              "hit_at_2": false,
+              "reciprocal_rank": 0,
+              "retrieved": [
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 1436,
+                  "end": 1924
+                },
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 0,
+                  "end": 599
+                }
+              ]
+            },
+            {
+              "id": "Q08",
+              "hit_at_2": false,
+              "reciprocal_rank": 0,
+              "retrieved": [
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 24191,
+                  "end": 24420
+                },
+                {
+                  "source": "I_am_not_sick_excerpt.txt",
+                  "start": 10039,
+                  "end": 10982
+                }
+              ]
+            },
+            {
+              "id": "Q09",
+              "hit_at_2": false,
+              "reciprocal_rank": 0,
+              "retrieved": [
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 40540,
+                  "end": 41148
+                },
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 24191,
+                  "end": 24420
+                }
+              ]
+            },
+            {
+              "id": "Q10",
+              "hit_at_2": true,
+              "reciprocal_rank": 0.5,
+              "retrieved": [
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 12326,
+                  "end": 13306
+                },
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 13304,
+                  "end": 14035
+                }
+              ]
+            },
+            {
+              "id": "Q11",
+              "hit_at_2": false,
+              "reciprocal_rank": 0,
+              "retrieved": [
+                {
+                  "source": "I_am_not_sick_excerpt.txt",
+                  "start": 104367,
+                  "end": 105026
+                },
+                {
+                  "source": "I_am_not_sick_excerpt.txt",
+                  "start": 80377,
+                  "end": 80398
+                }
+              ]
+            },
+            {
+              "id": "Q12",
+              "hit_at_2": false,
+              "reciprocal_rank": 0,
+              "retrieved": [
+                {
+                  "source": "I_am_not_sick_excerpt.txt",
+                  "start": 89616,
+                  "end": 89637
+                },
+                {
+                  "source": "I_am_not_sick_excerpt.txt",
+                  "start": 15334,
+                  "end": 16285
+                }
+              ]
+            },
+            {
+              "id": "Q13",
+              "hit_at_2": false,
+              "reciprocal_rank": 0,
+              "retrieved": [
+                {
+                  "source": "I_am_not_sick_excerpt.txt",
+                  "start": 83723,
+                  "end": 83985
+                },
+                {
+                  "source": "I_am_not_sick_excerpt.txt",
+                  "start": 11585,
+                  "end": 11833
+                }
+              ]
+            },
+            {
+              "id": "Q14",
+              "hit_at_2": false,
+              "reciprocal_rank": 0,
+              "retrieved": [
+                {
+                  "source": "I_am_not_sick_excerpt.txt",
+                  "start": 82119,
+                  "end": 82140
+                },
+                {
+                  "source": "I_am_not_sick_excerpt.txt",
+                  "start": 85827,
+                  "end": 85848
+                }
+              ]
+            }
+          ]
+        },
+        "hybrid": {
+          "hits": 10,
+          "total": 14,
+          "hit_rate": 0.7142857142857143,
+          "mrr_at_2": 0.6428571428571429,
+          "results": [
+            {
+              "id": "Q01",
+              "hit_at_2": true,
+              "reciprocal_rank": 1.0,
+              "retrieved": [
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 3574,
+                  "end": 4475
+                },
+                {
+                  "source": "I_am_not_sick_excerpt.txt",
+                  "start": 83723,
+                  "end": 83985
+                }
+              ]
+            },
+            {
+              "id": "Q02",
+              "hit_at_2": true,
+              "reciprocal_rank": 1.0,
+              "retrieved": [
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 4474,
+                  "end": 5432
+                },
+                {
+                  "source": "I_am_not_sick_excerpt.txt",
+                  "start": 48037,
+                  "end": 48973
+                }
+              ]
+            },
+            {
+              "id": "Q03",
+              "hit_at_2": true,
+              "reciprocal_rank": 1.0,
+              "retrieved": [
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 4474,
+                  "end": 5432
+                },
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 27326,
+                  "end": 28104
+                }
+              ]
+            },
+            {
+              "id": "Q04",
+              "hit_at_2": false,
+              "reciprocal_rank": 0,
+              "retrieved": [
+                {
+                  "source": "I_am_not_sick_excerpt.txt",
+                  "start": 130238,
+                  "end": 130550
+                },
+                {
+                  "source": "I_am_not_sick_excerpt.txt",
+                  "start": 155525,
+                  "end": 156470
+                }
+              ]
+            },
+            {
+              "id": "Q05",
+              "hit_at_2": true,
+              "reciprocal_rank": 1.0,
+              "retrieved": [
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 5431,
+                  "end": 6224
+                },
+                {
+                  "source": "I_am_not_sick_excerpt.txt",
+                  "start": 105028,
+                  "end": 105200
+                }
+              ]
+            },
+            {
+              "id": "Q06",
+              "hit_at_2": true,
+              "reciprocal_rank": 1.0,
+              "retrieved": [
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 7858,
+                  "end": 8470
+                },
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 1436,
+                  "end": 1924
+                }
+              ]
+            },
+            {
+              "id": "Q07",
+              "hit_at_2": true,
+              "reciprocal_rank": 1.0,
+              "retrieved": [
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 8468,
+                  "end": 9420
+                },
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 1436,
+                  "end": 1924
+                }
+              ]
+            },
+            {
+              "id": "Q08",
+              "hit_at_2": true,
+              "reciprocal_rank": 1.0,
+              "retrieved": [
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 3574,
+                  "end": 4475
+                },
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 9418,
+                  "end": 10101
+                }
+              ]
+            },
+            {
+              "id": "Q09",
+              "hit_at_2": false,
+              "reciprocal_rank": 0,
+              "retrieved": [
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 17176,
+                  "end": 18157
+                },
+                {
+                  "source": "I_am_not_sick_excerpt.txt",
+                  "start": 61182,
+                  "end": 61584
+                }
+              ]
+            },
+            {
+              "id": "Q10",
+              "hit_at_2": true,
+              "reciprocal_rank": 0.5,
+              "retrieved": [
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 12326,
+                  "end": 13306
+                },
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 13304,
+                  "end": 14035
+                }
+              ]
+            },
+            {
+              "id": "Q11",
+              "hit_at_2": false,
+              "reciprocal_rank": 0,
+              "retrieved": [
+                {
+                  "source": "I_am_not_sick_excerpt.txt",
+                  "start": 98111,
+                  "end": 99096
+                },
+                {
+                  "source": "I_am_not_sick_excerpt.txt",
+                  "start": 104367,
+                  "end": 105026
+                }
+              ]
+            },
+            {
+              "id": "Q12",
+              "hit_at_2": false,
+              "reciprocal_rank": 0,
+              "retrieved": [
+                {
+                  "source": "I_am_not_sick_excerpt.txt",
+                  "start": 11585,
+                  "end": 11833
+                },
+                {
+                  "source": "I_am_not_sick_excerpt.txt",
+                  "start": 158480,
+                  "end": 159455
+                }
+              ]
+            },
+            {
+              "id": "Q13",
+              "hit_at_2": true,
+              "reciprocal_rank": 1.0,
+              "retrieved": [
+                {
+                  "source": "I_am_not_sick_excerpt.txt",
+                  "start": 206912,
+                  "end": 207675
+                },
+                {
+                  "source": "I_am_not_sick_excerpt.txt",
+                  "start": 89639,
+                  "end": 90618
+                }
+              ]
+            },
+            {
+              "id": "Q14",
+              "hit_at_2": true,
+              "reciprocal_rank": 0.5,
+              "retrieved": [
+                {
+                  "source": "I_am_not_sick_excerpt.txt",
+                  "start": 165849,
+                  "end": 166586
+                },
+                {
+                  "source": "I_am_not_sick_excerpt.txt",
+                  "start": 206912,
+                  "end": 207675
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "fresh_questions.json": {
+      "sha256": "a51106dff7fd0a72c7fd24f4828027cc03ab313fcf677433c8c7ce70dda604d2",
+      "methods": {
+        "old_mmr": {
+          "hits": 5,
+          "total": 10,
+          "hit_rate": 0.5,
+          "mrr_at_2": 0.5,
+          "results": [
+            {
+              "id": "F01",
+              "hit_at_2": false,
+              "reciprocal_rank": 0,
+              "retrieved": [
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 20098,
+                  "end": 20734
+                },
+                {
+                  "source": "I_am_not_sick_excerpt.txt",
+                  "start": 21139,
+                  "end": 21155
+                }
+              ]
+            },
+            {
+              "id": "F02",
+              "hit_at_2": true,
+              "reciprocal_rank": 1.0,
+              "retrieved": [
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 19198,
+                  "end": 20100
+                },
+                {
+                  "source": "I_am_not_sick_excerpt.txt",
+                  "start": 130238,
+                  "end": 130550
+                }
+              ]
+            },
+            {
+              "id": "F03",
+              "hit_at_2": true,
+              "reciprocal_rank": 1.0,
+              "retrieved": [
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 20098,
+                  "end": 20734
+                },
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 24191,
+                  "end": 24420
+                }
+              ]
+            },
+            {
+              "id": "F04",
+              "hit_at_2": false,
+              "reciprocal_rank": 0,
+              "retrieved": [
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 20098,
+                  "end": 20734
+                },
+                {
+                  "source": "I_am_not_sick_excerpt.txt",
+                  "start": 130238,
+                  "end": 130550
+                }
+              ]
+            },
+            {
+              "id": "F05",
+              "hit_at_2": true,
+              "reciprocal_rank": 1.0,
+              "retrieved": [
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 20098,
+                  "end": 20734
+                },
+                {
+                  "source": "I_am_not_sick_excerpt.txt",
+                  "start": 145427,
+                  "end": 146283
+                }
+              ]
+            },
+            {
+              "id": "F06",
+              "hit_at_2": false,
+              "reciprocal_rank": 0,
+              "retrieved": [
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 22916,
+                  "end": 23397
+                },
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 34923,
+                  "end": 35739
+                }
+              ]
+            },
+            {
+              "id": "F07",
+              "hit_at_2": false,
+              "reciprocal_rank": 0,
+              "retrieved": [
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 22117,
+                  "end": 23040
+                },
+                {
+                  "source": "I_am_not_sick_excerpt.txt",
+                  "start": 198671,
+                  "end": 198934
+                }
+              ]
+            },
+            {
+              "id": "F08",
+              "hit_at_2": false,
+              "reciprocal_rank": 0,
+              "retrieved": [
+                {
+                  "source": "I_am_not_sick_excerpt.txt",
+                  "start": 120552,
+                  "end": 121456
+                },
+                {
+                  "source": "I_am_not_sick_excerpt.txt",
+                  "start": 168330,
+                  "end": 169071
+                }
+              ]
+            },
+            {
+              "id": "F09",
+              "hit_at_2": true,
+              "reciprocal_rank": 1.0,
+              "retrieved": [
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 28930,
+                  "end": 29860
+                },
+                {
+                  "source": "I_am_not_sick_excerpt.txt",
+                  "start": 22800,
+                  "end": 23247
+                }
+              ]
+            },
+            {
+              "id": "F10",
+              "hit_at_2": true,
+              "reciprocal_rank": 1.0,
+              "retrieved": [
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 7140,
+                  "end": 7990
+                },
+                {
+                  "source": "I_am_not_sick_excerpt.txt",
+                  "start": 196773,
+                  "end": 197093
+                }
+              ]
+            }
+          ]
+        },
+        "old_similarity": {
+          "hits": 8,
+          "total": 10,
+          "hit_rate": 0.8,
+          "mrr_at_2": 0.65,
+          "results": [
+            {
+              "id": "F01",
+              "hit_at_2": true,
+              "reciprocal_rank": 0.5,
+              "retrieved": [
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 20098,
+                  "end": 20734
+                },
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 19198,
+                  "end": 20100
+                }
+              ]
+            },
+            {
+              "id": "F02",
+              "hit_at_2": true,
+              "reciprocal_rank": 1.0,
+              "retrieved": [
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 19198,
+                  "end": 20100
+                },
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 20098,
+                  "end": 20734
+                }
+              ]
+            },
+            {
+              "id": "F03",
+              "hit_at_2": true,
+              "reciprocal_rank": 1.0,
+              "retrieved": [
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 20098,
+                  "end": 20734
+                },
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 20732,
+                  "end": 21595
+                }
+              ]
+            },
+            {
+              "id": "F04",
+              "hit_at_2": false,
+              "reciprocal_rank": 0,
+              "retrieved": [
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 20098,
+                  "end": 20734
+                },
+                {
+                  "source": "I_am_not_sick_excerpt.txt",
+                  "start": 25241,
+                  "end": 25257
+                }
+              ]
+            },
+            {
+              "id": "F05",
+              "hit_at_2": true,
+              "reciprocal_rank": 1.0,
+              "retrieved": [
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 20098,
+                  "end": 20734
+                },
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 20732,
+                  "end": 21595
+                }
+              ]
+            },
+            {
+              "id": "F06",
+              "hit_at_2": true,
+              "reciprocal_rank": 0.5,
+              "retrieved": [
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 22916,
+                  "end": 23397
+                },
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 22117,
+                  "end": 23040
+                }
+              ]
+            },
+            {
+              "id": "F07",
+              "hit_at_2": true,
+              "reciprocal_rank": 0.5,
+              "retrieved": [
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 22117,
+                  "end": 23040
+                },
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 22916,
+                  "end": 23397
+                }
+              ]
+            },
+            {
+              "id": "F08",
+              "hit_at_2": false,
+              "reciprocal_rank": 0,
+              "retrieved": [
+                {
+                  "source": "I_am_not_sick_excerpt.txt",
+                  "start": 120552,
+                  "end": 121456
+                },
+                {
+                  "source": "I_am_not_sick_excerpt.txt",
+                  "start": 160806,
+                  "end": 161790
+                }
+              ]
+            },
+            {
+              "id": "F09",
+              "hit_at_2": true,
+              "reciprocal_rank": 1.0,
+              "retrieved": [
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 28930,
+                  "end": 29860
+                },
+                {
+                  "source": "I_am_not_sick_excerpt.txt",
+                  "start": 19209,
+                  "end": 20172
+                }
+              ]
+            },
+            {
+              "id": "F10",
+              "hit_at_2": true,
+              "reciprocal_rank": 1.0,
+              "retrieved": [
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 7140,
+                  "end": 7990
+                },
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 1436,
+                  "end": 1924
+                }
+              ]
+            }
+          ]
+        },
+        "hybrid": {
+          "hits": 8,
+          "total": 10,
+          "hit_rate": 0.8,
+          "mrr_at_2": 0.7,
+          "results": [
+            {
+              "id": "F01",
+              "hit_at_2": true,
+              "reciprocal_rank": 1.0,
+              "retrieved": [
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 19198,
+                  "end": 20100
+                },
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 20098,
+                  "end": 20734
+                }
+              ]
+            },
+            {
+              "id": "F02",
+              "hit_at_2": true,
+              "reciprocal_rank": 1.0,
+              "retrieved": [
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 19198,
+                  "end": 20100
+                },
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 20098,
+                  "end": 20734
+                }
+              ]
+            },
+            {
+              "id": "F03",
+              "hit_at_2": true,
+              "reciprocal_rank": 1.0,
+              "retrieved": [
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 20098,
+                  "end": 20734
+                },
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 20732,
+                  "end": 21595
+                }
+              ]
+            },
+            {
+              "id": "F04",
+              "hit_at_2": false,
+              "reciprocal_rank": 0,
+              "retrieved": [
+                {
+                  "source": "I_am_not_sick_excerpt.txt",
+                  "start": 193430,
+                  "end": 193762
+                },
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 6223,
+                  "end": 7141
+                }
+              ]
+            },
+            {
+              "id": "F05",
+              "hit_at_2": true,
+              "reciprocal_rank": 0.5,
+              "retrieved": [
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 6223,
+                  "end": 7141
+                },
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 20098,
+                  "end": 20734
+                }
+              ]
+            },
+            {
+              "id": "F06",
+              "hit_at_2": true,
+              "reciprocal_rank": 1.0,
+              "retrieved": [
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 22117,
+                  "end": 23040
+                },
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 22916,
+                  "end": 23397
+                }
+              ]
+            },
+            {
+              "id": "F07",
+              "hit_at_2": true,
+              "reciprocal_rank": 0.5,
+              "retrieved": [
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 6223,
+                  "end": 7141
+                },
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 22916,
+                  "end": 23397
+                }
+              ]
+            },
+            {
+              "id": "F08",
+              "hit_at_2": false,
+              "reciprocal_rank": 0,
+              "retrieved": [
+                {
+                  "source": "I_am_not_sick_excerpt.txt",
+                  "start": 98907,
+                  "end": 99761
+                },
+                {
+                  "source": "I_am_not_sick_excerpt.txt",
+                  "start": 169119,
+                  "end": 170056
+                }
+              ]
+            },
+            {
+              "id": "F09",
+              "hit_at_2": true,
+              "reciprocal_rank": 1.0,
+              "retrieved": [
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 28930,
+                  "end": 29860
+                },
+                {
+                  "source": "I_am_not_sick_excerpt.txt",
+                  "start": 24859,
+                  "end": 25238
+                }
+              ]
+            },
+            {
+              "id": "F10",
+              "hit_at_2": true,
+              "reciprocal_rank": 1.0,
+              "retrieved": [
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 7140,
+                  "end": 7990
+                },
+                {
+                  "source": "The_little_book_of_mental_health_-_version_6.txt",
+                  "start": 1436,
+                  "end": 1924
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

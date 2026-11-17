@@ -1,0 +1,82 @@
+[
+  {
+    "id": "F01",
+    "question": "Which part of the body should move during stomach breathing?",
+    "source": "The_little_book_of_mental_health_-_version_6.txt",
+    "evidence_start": 19600,
+    "evidence_end": 19638,
+    "expected_answer": "The abdomen, rather than the upper chest."
+  },
+  {
+    "id": "F02",
+    "question": "How does the slow breathing exercise time inhaling and exhaling?",
+    "source": "The_little_book_of_mental_health_-_version_6.txt",
+    "evidence_start": 19824,
+    "evidence_end": 19859,
+    "expected_answer": "Slow inhaling and exhaling, each to a count of three seconds."
+  },
+  {
+    "id": "F03",
+    "question": "What preparation is recommended before starting muscle-tensing relaxation?",
+    "source": "The_little_book_of_mental_health_-_version_6.txt",
+    "evidence_start": 20266,
+    "evidence_end": 20309,
+    "expected_answer": "Discuss the exercise with a GP, particularly with relevant health history."
+  },
+  {
+    "id": "F04",
+    "question": "Where does the muscle relaxation sequence begin and end?",
+    "source": "The_little_book_of_mental_health_-_version_6.txt",
+    "evidence_start": 20808,
+    "evidence_end": 20837,
+    "expected_answer": "It moves upward from feet to face and head."
+  },
+  {
+    "id": "F05",
+    "question": "What kind of setting is suggested for practising relaxation?",
+    "source": "The_little_book_of_mental_health_-_version_6.txt",
+    "evidence_start": 20473,
+    "evidence_end": 20493,
+    "expected_answer": "A quiet place without interruptions."
+  },
+  {
+    "id": "F06",
+    "question": "What actions are listed as immediate first aid for anger?",
+    "source": "The_little_book_of_mental_health_-_version_6.txt",
+    "evidence_start": 22544,
+    "evidence_end": 22571,
+    "expected_answer": "Slow breathing, pausing, counting, walking away and physical activity."
+  },
+  {
+    "id": "F07",
+    "question": "What creative activities are suggested for expressing longer-term angry feelings?",
+    "source": "The_little_book_of_mental_health_-_version_6.txt",
+    "evidence_start": 23213,
+    "evidence_end": 23257,
+    "expected_answer": "Writing or painting."
+  },
+  {
+    "id": "F08",
+    "question": "How can a listener support a distressed friend without dictating their feelings?",
+    "source": "The_little_book_of_mental_health_-_version_6.txt",
+    "evidence_start": 29187,
+    "evidence_end": 29213,
+    "expected_answer": "Listen, reassure and encourage without prescribing feelings or actions."
+  },
+  {
+    "id": "F09",
+    "question": "Why should a person supporting a distressed relative also seek support themselves?",
+    "source": "The_little_book_of_mental_health_-_version_6.txt",
+    "evidence_start": 29531,
+    "evidence_end": 29569,
+    "expected_answer": "Caring can be upsetting; the supporter’s wellbeing matters too."
+  },
+  {
+    "id": "F10",
+    "question": "What benefits of regular exercise are listed in the emotional wellbeing section?",
+    "source": "The_little_book_of_mental_health_-_version_6.txt",
+    "evidence_start": 7195,
+    "evidence_end": 7240,
+    "expected_answer": "Confidence, tension relief and sleep are among the listed benefits."
+  }
+]
