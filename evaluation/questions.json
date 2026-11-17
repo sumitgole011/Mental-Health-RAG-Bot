@@ -1,0 +1,128 @@
+[
+  {
+    "id": "Q01",
+    "split": "development",
+    "question": "According to the booklet, how should achievable goals be chosen?",
+    "source": "The_little_book_of_mental_health_-_version_6.txt",
+    "evidence_start": 3599,
+    "evidence_end": 3618,
+    "expected_answer": "Goals should be specific and achievable."
+  },
+  {
+    "id": "Q02",
+    "split": "holdout",
+    "question": "How does the booklet distinguish self-confidence from self-esteem?",
+    "source": "The_little_book_of_mental_health_-_version_6.txt",
+    "evidence_start": 4701,
+    "evidence_end": 4729,
+    "expected_answer": "Confidence concerns abilities; esteem concerns self-worth."
+  },
+  {
+    "id": "Q03",
+    "split": "development",
+    "question": "What does the booklet recommend doing each morning for time management?",
+    "source": "The_little_book_of_mental_health_-_version_6.txt",
+    "evidence_start": 5381,
+    "evidence_end": 5398,
+    "expected_answer": "Spend a short period planning the day."
+  },
+  {
+    "id": "Q04",
+    "split": "holdout",
+    "question": "What do A, B, C and D mean in the booklet time-priority system?",
+    "source": "The_little_book_of_mental_health_-_version_6.txt",
+    "evidence_start": 5497,
+    "evidence_end": 5521,
+    "expected_answer": "Essential, today, can wait, or delegate."
+  },
+  {
+    "id": "Q05",
+    "split": "development",
+    "question": "Why does the booklet say avoiding problems can be unhelpful?",
+    "source": "The_little_book_of_mental_health_-_version_6.txt",
+    "evidence_start": 5683,
+    "evidence_end": 5707,
+    "expected_answer": "Avoidance can worsen problems and create more stress."
+  },
+  {
+    "id": "Q06",
+    "split": "holdout",
+    "question": "What steps does the booklet give for solving a problem?",
+    "source": "The_little_book_of_mental_health_-_version_6.txt",
+    "evidence_start": 8115,
+    "evidence_end": 8138,
+    "expected_answer": "Define it, list options, weigh them, choose and act in steps."
+  },
+  {
+    "id": "Q07",
+    "split": "development",
+    "question": "Which five ways to wellbeing does the booklet describe?",
+    "source": "The_little_book_of_mental_health_-_version_6.txt",
+    "evidence_start": 8495,
+    "evidence_end": 8525,
+    "expected_answer": "Connection, activity, awareness, learning and giving."
+  },
+  {
+    "id": "Q08",
+    "split": "holdout",
+    "question": "What does the booklet say about rewarding small achievements?",
+    "source": "The_little_book_of_mental_health_-_version_6.txt",
+    "evidence_start": 4137,
+    "evidence_end": 4169,
+    "expected_answer": "Recognize achievements and make time for rewarding activities."
+  },
+  {
+    "id": "Q09",
+    "split": "development",
+    "question": "What does the booklet suggest when a task feels too difficult?",
+    "source": "The_little_book_of_mental_health_-_version_6.txt",
+    "evidence_start": 11776,
+    "evidence_end": 11805,
+    "expected_answer": "Divide it into smaller steps."
+  },
+  {
+    "id": "Q10",
+    "split": "holdout",
+    "question": "What are the three steps for changing negative thinking in the booklet?",
+    "source": "The_little_book_of_mental_health_-_version_6.txt",
+    "evidence_start": 13681,
+    "evidence_end": 13708,
+    "expected_answer": "Record the thought, question its truth, and form a realistic alternative."
+  },
+  {
+    "id": "Q11",
+    "split": "development",
+    "question": "In the LEAP quick-start guide, how should reflective listening be performed?",
+    "source": "I_am_not_sick_excerpt.txt",
+    "evidence_start": 206091,
+    "evidence_end": 206120,
+    "expected_answer": "Reflect the message without arguing or contradicting."
+  },
+  {
+    "id": "Q12",
+    "split": "holdout",
+    "question": "What three A principles are used when finally giving an opinion in LEAP?",
+    "source": "I_am_not_sick_excerpt.txt",
+    "evidence_start": 206912,
+    "evidence_end": 206946,
+    "expected_answer": "Apologize, acknowledge fallibility, agree to disagree."
+  },
+  {
+    "id": "Q13",
+    "split": "development",
+    "question": "What is the purpose of the PARTNER step in the LEAP quick-start guide?",
+    "source": "I_am_not_sick_excerpt.txt",
+    "evidence_start": 207612,
+    "evidence_end": 207648,
+    "expected_answer": "Collaborate on shared goals."
+  },
+  {
+    "id": "Q14",
+    "split": "holdout",
+    "question": "What does the AGREE step in the LEAP quick-start guide focus on?",
+    "source": "I_am_not_sick_excerpt.txt",
+    "evidence_start": 207443,
+    "evidence_end": 207483,
+    "expected_answer": "Discuss perceived problems and treatment tradeoffs, emphasizing perceived benefits."
+  }
+]

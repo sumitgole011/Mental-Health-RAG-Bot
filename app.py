@@ -2,11 +2,10 @@ from flask import Flask, request, jsonify, render_template
 from langchain_groq import ChatGroq
 from dotenv import load_dotenv
 from langchain_core.messages import HumanMessage, AIMessage
-from langchain_community.document_loaders import DirectoryLoader
-from langchain.prompts import PromptTemplate
-from langchain.embeddings import HuggingFaceEmbeddings
-from langchain_text_splitters import RecursiveCharacterTextSplitter
-from langchain_community.vectorstores import Chroma
+from pathlib import Path
+from retrieval import HybridRetriever, load_chunks
+from langchain_core.prompts import PromptTemplate
+from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_core.runnables import RunnableParallel, RunnableLambda, RunnablePassthrough
 from langchain_core.output_parsers import StrOutputParser
 import threading, pyttsx3
@@ -16,16 +15,12 @@ load_dotenv()
 app = Flask(__name__)
 
 # ---------------- PDF Loading ----------------
-loader = DirectoryLoader('Doc')
-docs = loader.load()
-splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
-chunk = splitter.split_documents(docs)
-
-# ---------------- Model & Vector DB ----------------
+knowledge_directory = Path(__file__).resolve().parent / 'Doc'
+chunks = load_chunks(knowledge_directory)
 model = ChatGroq(model="gemma2-9b-it", temperature=0.7, max_tokens=100)
 embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
-vector_store = Chroma.from_documents(chunk, embeddings)
-retriever = vector_store.as_retriever(search_type="mmr", search_kwargs={"k": 2})
+hybrid_retriever = HybridRetriever(chunks, embeddings, k=2)
+retriever = RunnableLambda(hybrid_retriever.invoke)
 
 # ---------------- Helpers ----------------
 def merge_chunks(chunks):
@@ -107,5 +102,6 @@ def chat():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
 
 

@@ -14,7 +14,7 @@ class RepositoryContractTests(unittest.TestCase):
     def test_knowledge_folder_and_loader_match(self):
         self.assertTrue((ROOT / "Doc").is_dir())
         source = (ROOT / "app.py").read_text(encoding="utf-8")
-        self.assertIn("DirectoryLoader('Doc')", source)
+        self.assertIn("load_chunks(knowledge_directory)", source)
         self.assertFalse("Peoject_2/Doc" in source)
 
     def test_no_literal_groq_token_in_main_app(self):
@@ -23,3 +23,4 @@ class RepositoryContractTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+

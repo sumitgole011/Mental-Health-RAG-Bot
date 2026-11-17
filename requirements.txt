@@ -8,3 +8,7 @@ chromadb
 sentence-transformers
 python-dotenv
 pyttsx3
+
+langchain-huggingface
+scikit-learn
+numpy
