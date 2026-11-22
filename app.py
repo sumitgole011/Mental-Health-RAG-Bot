@@ -1,5 +1,6 @@
 import json
 import os
+import re
 from functools import cache
 from pathlib import Path
 from threading import Thread
@@ -81,10 +82,12 @@ def verified_reply(content, passages):
 
         passage = passages[passage_id - 1]
         quote = quote.strip()
-        offset = passage.page_content.find(quote)
-        if offset == -1:
+        pattern = r"\s+".join(re.escape(word) for word in quote.split())
+        match = re.search(pattern, passage.page_content)
+        if match is None:
             return NO_EVIDENCE, []
-        start = passage.metadata["start_index"] + offset
+        start = passage.metadata["start_index"] + match.start()
+        quote = match.group()
         sources.append({
             "source": passage.metadata["source"],
             "quote": quote,

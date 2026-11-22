@@ -102,6 +102,19 @@ class ChatTests(unittest.TestCase):
         self.assertEqual(self.ask().get_json(), {"response": chat_app.NO_EVIDENCE, "sources": []})
         self.assertEqual(self.requests, [])
 
+    def test_citation_preserves_source_line_breaks(self):
+        passage = "Choose a quiet place where you will not be\ninterrupted"
+        self.retriever.invoke.return_value = [
+            Document(page_content=passage, metadata={"source": SOURCE, "start_index": 6})
+        ]
+        self.answer = {
+            "answer": "Choose a quiet place.",
+            "citations": [{"passage_id": 1, "quote": passage.replace("\n", " ")}],
+        }
+        source, = self.ask().get_json()["sources"]
+        self.assertEqual(source["quote"], passage)
+        self.assertEqual(source["end_index"], 6 + len(passage))
+
     def test_uses_model_override_and_keeps_request_history_separate(self):
         os.environ["GROQ_MODEL"] = "openai/gpt-oss-120b"
         history = [{"role": "user", "content": "I am asking about the library."}]
