@@ -1,271 +1,80 @@
-# 🧠 Mental Health Buddy — AI-Powered RAG Chatbot
+# Mental Health Buddy
 
-## Recruiter quick view
+A Flask RAG prototype for asking questions about two local wellbeing documents. The app combines keyword and semantic retrieval, sends up to two passages to Groq, and shows verified source quotations with the answer.
 
-**Problem:** Generic chatbot responses can miss context from a defined knowledge source.
+[Retrieval evaluation and results](docs/retrieval-evaluation.md) · [GitHub Actions](https://github.com/sumitgole011/Mental-Health-RAG-Bot/actions/workflows/source-checks.yml)
 
-**Approach:** A Python/Flask conversational RAG prototype using document retrieval, LangChain, an LLM integration and optional speech output.
+## Run locally
 
-**Engineering discussion points:** Document loading, chunking, embeddings, vector search, prompt grounding, conversation state and failure handling.
-
-### Safety, privacy and responsible use
-
-This is an **educational AI prototype**, not a therapist, medical device, crisis-response service or substitute for qualified mental-health care. Responses can be inaccurate or inappropriate, and retrieval does not guarantee factual correctness. Do not use this application to make diagnosis or treatment decisions. In an immediate crisis, contact local emergency services or an appropriate crisis-support provider.
-
-Avoid entering personally identifying, medical or other sensitive information into the demo. Before any real-world deployment, review third-party model data handling, storage and retention, access controls, content-safety behavior, and escalation paths. No clinical validation is claimed.
-
-
-<p align="center">
-  <strong>A conversational AI companion designed to provide empathetic responses using knowledge retrieval, large language models, and speech interaction.</strong>
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
-  <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white" alt="Flask"/>
-  <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge" alt="LangChain"/>
-  <img src="https://img.shields.io/badge/ChromaDB-Vector%20Database-2E8B57?style=for-the-badge" alt="ChromaDB"/>
-  <img src="https://img.shields.io/badge/Groq-LLM%20Integration-F55036?style=for-the-badge" alt="Groq"/>
-</p>
-
-## 📌 Overview
-
-**Mental Health Buddy** is an AI-powered conversational application built using Python, Flask, LangChain, and Groq. It is designed to provide supportive, empathetic conversations while retrieving relevant information from a document-based knowledge source.
-
-The application uses a **Retrieval-Augmented Generation (RAG)** pipeline to combine contextual information from local documents with language-model responses. It also maintains conversation history during a running session and can speak generated responses aloud using text-to-speech.
-
-The project explores how AI, semantic retrieval, and natural language processing can be integrated into a conversational support application.
-
-## ✨ Key Features
-
-- 💬 **Conversational Interface:** Chat with an AI companion through a web interface.
-- 💜 **Empathetic Responses:** Uses a customized prompt to encourage supportive and approachable communication.
-- 📚 **Knowledge-Based Retrieval:** Loads local documents to provide additional context for responses.
-- 🧠 **RAG Architecture:** Retrieves relevant document passages before generating answers.
-- 🔎 **Semantic Search:** Uses ChromaDB with Hugging Face sentence embeddings.
-- 🤖 **LLM Integration:** Uses Groq's hosted Gemma 2 9B Instruct model through LangChain.
-- 🗂️ **Conversation History:** Maintains message history during the active application session.
-- 🔊 **Text-to-Speech:** Speaks generated responses using `pyttsx3`.
-- 🎙️ **Speech Interaction Prototype:** Includes a separate experimental script with speech recognition and tone selection.
-- 🌐 **Flask Backend:** Exposes a chat endpoint that returns AI-generated responses as JSON.
-
-## 🛠️ Technology Stack
-
-| Technology | Purpose |
-|---|---|
-| Python | Core application logic |
-| Flask | Web framework and API routes |
-| LangChain | RAG pipeline and model orchestration |
-| Groq | Hosted language-model inference |
-| Gemma 2 9B Instruct | Configured conversational model |
-| ChromaDB | Vector storage and retrieval |
-| Hugging Face Embeddings | Semantic representation of text |
-| Sentence Transformers | Embedding model |
-| pyttsx3 | Text-to-speech output |
-| SpeechRecognition | Speech-input prototype |
-| HTML and CSS | Chat interface |
-| python-dotenv | Environment variable management |
-
-## 🏗️ System Architecture
-
-The main application follows this retrieval-augmented workflow:
-
-1. **Document Loading:** Loads knowledge documents from a local directory.
-2. **Text Preprocessing:** Splits documents into smaller chunks with overlapping context.
-3. **Embedding Generation:** Converts chunks into vectors using the configured embedding model.
-4. **Vector Indexing:** Stores document embeddings in ChromaDB.
-5. **User Input:** Receives a message through the web interface.
-6. **Context Retrieval:** Retrieves up to two relevant document chunks using maximum marginal relevance (MMR).
-7. **Response Generation:** Sends the retrieved context, user message, and conversation history to the Groq-hosted model.
-8. **Speech Output:** Uses text-to-speech to read the response aloud.
-9. **API Response:** Returns the generated message to the frontend as JSON.
-
-## 🔄 RAG Workflow
-
-```text
-Local Knowledge Documents
-          |
-          v
-   Document Loading
-          |
-          v
-    Text Chunking
-          |
-          v
- Hugging Face Embeddings
-          |
-          v
-   ChromaDB Vector Store
-          |
-          v
-      User Message
-          |
-          v
-  Relevant Context Retrieval
-          |
-          v
- Context + Question + History
-          |
-          v
-     Groq / Gemma Model
-          |
-          v
-   Generated AI Response
-          |
-       +--+--+
-       |     |
-       v     v
-   Web UI  Text-to-Speech
-```
-
-## 📂 Project Structure
-
-```text
-Mental-Health-RAG-Bot/
-│
-├── app.py
-├── speaking_bot.py
-├── requirements.txt
-├── experiment.ipynb
-│
-├── Doc/
-│   ├── I_am_not_sick_excerpt.txt
-│   └── The_little_book_of_mental_health_-_version_6.txt
-│
-├── templates/
-│   └── index.html
-│
-└── README.md
-```
-
-## ⚙️ Installation and Setup
-
-### Prerequisites
-
-- Python 3.10 or later recommended
-- Git
-- pip
-- A Groq API key
-
-### Step 1: Clone the repository
+Use Python 3.12, Git, and a Groq API key. The first chat request downloads the MiniLM embedding model from Hugging Face if it is missing locally.
 
 ```bash
 git clone https://github.com/sumitgole011/Mental-Health-RAG-Bot.git
 cd Mental-Health-RAG-Bot
-```
-
-### Step 2: Create a virtual environment
-
-**macOS / Linux**
-
-```bash
 python3 -m venv .venv
 source .venv/bin/activate
+python -m pip install -r requirements.txt
+cp .env.example .env
 ```
 
-**Windows**
+On Windows PowerShell, use `python -m venv .venv`, `.\.venv\Scripts\Activate.ps1`, and `Copy-Item .env.example .env` for the environment and copy steps.
 
-```bash
-python -m venv .venv
-.venv\Scripts\activate
-```
-
-### Step 3: Install dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### Step 4: Configure your API key
-
-Create a `.env` file in the project root:
-
-```env
-GROQ_API_KEY=your_groq_api_key
-```
-
-Replace the placeholder with your actual Groq API key. Never commit API keys or other credentials to GitHub.
-
-### Step 5: Verify the knowledge-base directory
-
-The document loader now points to the repository's root-level `Doc/` directory:
-
-```python
-loader = DirectoryLoader("Doc")
-```
-
-Ensure the required documents are present before running the application. Start the app from the repository root.
-
-### Step 6: Run the chatbot
+Fill in `GROQ_API_KEY` in `.env`. The example uses `openai/gpt-oss-20b`. Set `GROQ_MODEL` to a model your Groq account can use in [JSON Object Mode](https://console.groq.com/docs/structured-outputs#json-object-mode) if you prefer a different model.
 
 ```bash
 python app.py
 ```
 
-Open the application in your browser:
+Open [http://127.0.0.1:5000](http://127.0.0.1:5000) and type a question. The microphone option appears in browsers that support speech recognition. Set `ENABLE_TTS=1` in `.env` for optional speech output on a machine with a working local speech engine.
 
-[http://127.0.0.1:5000/](http://127.0.0.1:5000/)
+## Verify two chat requests
 
-## 🔌 API Documentation
+Use your configured Groq key for these live checks. You can ask the same questions in the browser or run the commands below.
 
-### Chat Endpoint
+**Question covered by the booklet**
 
-**Route:** `/chat`
-
-**Method:** `POST`
-
-**Request Content-Type:** `application/json`
-
-Example request:
-
-```json
-{
-  "message": "I've been feeling stressed lately."
-}
+```bash
+curl --fail-with-body -sS http://127.0.0.1:5000/chat \
+  -H 'Content-Type: application/json' \
+  -d '{"message":"What kind of setting is suggested for practising relaxation?"}'
 ```
 
-Example response format:
+Look for a short answer and an exact supporting quote from `The_little_book_of_mental_health_-_version_6.txt` in `sources`. This question is also in the [retrieval pilot](evaluation/fresh_questions.json).
 
-```json
-{
-  "response": "I'm sorry things have been stressful. Would you like to talk about what's been weighing on you?"
-}
+**Question outside the documents**
+
+```bash
+curl --fail-with-body -sS http://127.0.0.1:5000/chat \
+  -H 'Content-Type: application/json' \
+  -d '{"message":"What is the tallest mountain on Mars?"}'
 ```
 
-The response above is illustrative; actual responses are generated by the configured language model.
+Expected `response` is `I couldn't find enough evidence in the documents to answer that.` with an empty `sources` list.
 
-### Home Endpoint
+## How the chat works
 
-| Method | Endpoint | Purpose |
-|---|---|---|
-| GET | `/` | Renders the chat interface |
-| POST | `/chat` | Processes a user message and returns a response |
+1. [retrieval.py](retrieval.py) loads UTF-8 text from `Doc/` and combines TF-IDF and MiniLM similarity rankings.
+2. [app.py](app.py) gives the question and top two passages to Groq and asks for a JSON answer with supporting quotations.
+3. The server checks each quotation against the original retrieved passage and assigns its source filename and character offsets. If the reply lacks verifiable citations, the API returns the evidence fallback.
+4. The browser renders the answer and its quotations together. Recent turns live in the browser tab and are sent with each request.
 
-## 🎙️ Experimental Speech Assistant
+`POST /chat` accepts JSON with a `message` string and an optional `history` list of up to four recent `user` or `assistant` messages. A successful response has a `response` string and a `sources` array with `source`, `quote`, `start_index`, and `end_index` for each citation. Offsets use zero-based Python character indices in the loaded UTF-8 text. `GET /` serves the chat page.
 
-The repository also includes `speaking_bot.py`, an experimental voice-based assistant that incorporates:
+## Run offline tests
 
-- Speech input through the SpeechRecognition library
-- Emotion or response-tone classification using a structured output schema
-- Context retrieval from local documents
-- Conversational response generation
-- Text-to-speech playback
+```bash
+python -m pip install -r requirements-retrieval-test.txt
+python -m unittest discover -s tests -v
+```
 
-This script is separate from the Flask web application and may require additional dependencies and configuration before it runs successfully.
+The tests exercise the Flask routes, Groq request format, citation checking, abstention, and provider errors through a simulated HTTP transport. They also cover document ingestion and retrieval with deterministic vectors.
 
-## 🧠 Concepts Demonstrated
+## Safety, privacy and responsible use
 
-- Retrieval-Augmented Generation (RAG)
-- Vector databases and semantic search
-- Text embedding models
-- Document chunking and contextual retrieval
-- LangChain runnable pipelines
-- Large Language Model integration
-- Flask web application development
-- Conversation history management
-- Text-to-speech integration
-- Speech recognition and structured output parsing
+This is an **educational AI prototype**, not a therapist, medical device, crisis-response service or substitute for qualified mental-health care. Responses can be inaccurate or inappropriate, and retrieval does not guarantee factual correctness. Do not use this application to make diagnosis or treatment decisions. In an immediate crisis, contact local emergency services or an appropriate crisis-support provider.
 
-## 🔮 Future Enhancements
+Avoid entering personally identifying, medical or other sensitive information into the demo. Before any real-world deployment, review third-party model data handling, storage and retention, access controls, content-safety behavior, and escalation paths. No clinical validation is claimed.
 
-- 💬 Improve multi-turn conversation memory.
-- 🎤 Add integrated
+## Experimental speech script
+
+`speaking_bot.py` is a separate prototype for voice input and tone classification. Use `app.py` for the supported setup and chat checks above.

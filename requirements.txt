@@ -1,6 +1,7 @@
 flask
 langchain
-langchain_groq
+groq
+langchain-groq
 langchain-community
 langchain-core
 langchain-text-splitters

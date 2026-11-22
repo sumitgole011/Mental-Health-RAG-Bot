@@ -1,4 +1,9 @@
+flask
+python-dotenv
+groq
+langchain-groq
 langchain-core
 langchain-text-splitters
 numpy
 scikit-learn
+httpx
