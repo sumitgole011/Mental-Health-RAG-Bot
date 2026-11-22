@@ -1,44 +1,119 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>AI Mental Health Assistant</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mental Health Buddy</title>
     <style>
-        body { font-family: Arial, sans-serif; background: #f0f2f5; text-align: center; }
-        .chat-box { width: 60%; margin: 20px auto; background: white; padding: 20px; border-radius: 10px; }
-        .message { margin: 10px; padding: 10px; border-radius: 8px; }
-        .user { background: #007bff; color: white; text-align: right; }
-        .bot { background: #e4e6eb; text-align: left; }
+        body { font-family: Arial, sans-serif; background: #f0f2f5; color: #172033; }
+        main { max-width: 44rem; margin: 2rem auto; padding: 0 1rem; }
+        .chat-box, form { background: white; border-radius: 10px; padding: 1rem; margin: 1rem 0; }
+        .message { padding: .75rem 1rem; border-radius: 8px; margin: .5rem 0; overflow-wrap: anywhere; }
+        .message p { margin: 0; white-space: pre-wrap; }
+        .user { background: #1259b2; color: white; }
+        .bot { background: #e4e6eb; }
+        .sources { font-size: .9rem; margin-bottom: 0; padding-left: 1.25rem; }
+        .sources li + li { margin-top: .5rem; }
+        .sources q { display: block; white-space: pre-wrap; }
+        textarea { display: block; width: 100%; box-sizing: border-box; margin: .5rem 0; font: inherit; }
+        button { padding: .5rem .75rem; font: inherit; }
     </style>
 </head>
 <body>
-    <h2>Hi Priya, I'm listening...</h2>
-    <button onclick="startRecording()">🎤 Tap to start speaking</button>
-    <div id="chat" class="chat-box"></div>
+    <main>
+        <h1>Mental Health Buddy</h1>
+        <p>Ask a question about the source documents. Keep sensitive personal information out of the demo.</p>
+        <form id="chat-form">
+            <label for="message">Your question</label>
+            <textarea id="message" name="message" rows="2" maxlength="2000" required></textarea>
+            <button id="send" type="submit">Ask</button>
+            <button id="voice" type="button" hidden>Use microphone</button>
+            <p id="status" role="status"></p>
+        </form>
+        <div id="chat" class="chat-box" role="log" aria-label="Conversation"></div>
+    </main>
 
     <script>
-        async function sendMessage(message) {
-            document.getElementById("chat").innerHTML += `<div class="message user">${message}</div>`;
-            
-            let response = await fetch("/chat", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ message })
-            });
-            
-            let data = await response.json();
-            document.getElementById("chat").innerHTML += `<div class="message bot">${data.response}</div>`;
+        const form = document.getElementById("chat-form");
+        const field = document.getElementById("message");
+        const send = document.getElementById("send");
+        const voice = document.getElementById("voice");
+        const status = document.getElementById("status");
+        const chat = document.getElementById("chat");
+        let history = [];
+
+        function addMessage(style, content, sources = []) {
+            const message = document.createElement("div");
+            message.classList.add("message", style);
+            const text = document.createElement("p");
+            text.textContent = content;
+            message.append(text);
+
+            if (sources.length) {
+                const list = document.createElement("ul");
+                list.classList.add("sources");
+                for (const source of sources) {
+                    const item = document.createElement("li");
+                    const name = document.createElement("strong");
+                    name.textContent = source.source;
+                    const quote = document.createElement("q");
+                    quote.textContent = source.quote;
+                    item.append(name, quote);
+                    list.append(item);
+                }
+                message.append(list);
+            }
+            chat.append(message);
         }
 
-        // Speech recognition (Web Speech API)
-        function startRecording() {
-            const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
-            recognition.lang = "en-US";
-            recognition.start();
+        form.addEventListener("submit", async (event) => {
+            event.preventDefault();
+            const message = field.value.trim();
+            if (!message || send.disabled) return;
 
-            recognition.onresult = function(event) {
-                let transcript = event.results[0][0].transcript;
-                sendMessage(transcript);
-            };
+            addMessage("user", message);
+            send.disabled = voice.disabled = true;
+            status.textContent = "Looking for evidence…";
+            try {
+                const response = await fetch("/chat", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ message, history })
+                });
+                const data = await response.json();
+                if (!response.ok) {
+                    status.textContent = data.error || "The server could not answer. Try again.";
+                    return;
+                }
+                addMessage("bot", data.response, data.sources);
+                history = [...history,
+                    { role: "user", content: message },
+                    { role: "assistant", content: data.response }
+                ].slice(-4);
+                if (field.value.trim() === message) field.value = "";
+                status.textContent = "";
+            } catch {
+                status.textContent = "Could not get a reply from the chat server. Try again.";
+            } finally {
+                send.disabled = voice.disabled = false;
+            }
+        });
+
+        const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+        if (SpeechRecognition) {
+            voice.hidden = false;
+            voice.addEventListener("click", () => {
+                const recognition = new SpeechRecognition();
+                recognition.lang = "en-US";
+                recognition.onresult = (event) => {
+                    field.value = event.results[0][0].transcript.slice(0, field.maxLength);
+                    form.requestSubmit();
+                };
+                recognition.onerror = () => {
+                    status.textContent = "Speech recognition is unavailable. You can type your question.";
+                };
+                recognition.start();
+            });
         }
     </script>
 </body>
