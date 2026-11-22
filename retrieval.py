@@ -47,6 +47,8 @@ class HybridRetriever:
         if not isinstance(query, str) or not query.strip():
             return []
         query = search_query(query)
+        if not query:
+            return []
         lexical = (self.lexical @ self.vectorizer.transform([query]).T).toarray().ravel()
         vector = np.asarray(self.embeddings.embed_query(query), dtype=np.float32)
         vector /= max(float(np.linalg.norm(vector)), 1e-12)

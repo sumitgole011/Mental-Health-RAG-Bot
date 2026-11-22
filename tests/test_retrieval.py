@@ -20,8 +20,11 @@ class TestRetrieval(unittest.TestCase):
   from langchain_core.documents import Document
   class Embeddings:
    def embed_documents(self,texts):return [[1.,0.],[0.,1.]]
-   def embed_query(self,text):return [0.,1.]
+   def embed_query(self,text):
+    if not text:raise AssertionError('Empty queries must not reach the embedding model')
+    return [0.,1.]
   docs=[Document(page_content='apples orchards fruit harvest'),Document(page_content='breathing relaxation exercise calm')]
   retriever=HybridRetriever(docs,Embeddings(),k=1)
   self.assertEqual(retriever.invoke('breathing exercise')[0],docs[1])
   self.assertEqual(retriever.invoke(''),[])
+  self.assertEqual(retriever.invoke('according to the booklet'),[])
