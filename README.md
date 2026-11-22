@@ -4,6 +4,14 @@ A Flask RAG prototype for asking questions about two local wellbeing documents. 
 
 [Retrieval evaluation and results](docs/retrieval-evaluation.md) · [GitHub Actions](https://github.com/sumitgole011/Mental-Health-RAG-Bot/actions/workflows/source-checks.yml)
 
+## Live demo
+
+The bot answers a question about the booklet with a source quote, then explains that the documents lack evidence for a question about Mars.
+
+[Watch the 32-second demo (MP4)](docs/rag-bot-demo.mp4)
+
+![The chat shows a cited answer and a fallback for a question outside the documents](docs/rag-bot-preview.jpg)
+
 ## Run locally
 
 Use Python 3.12, Git, and a Groq API key. The first chat request downloads the MiniLM embedding model from Hugging Face if it is missing locally.
